@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"path": "../CPP1"
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"barrier": "cpp",
+			"chrono": "cpp",
+			"random": "cpp",
+			"latch": "cpp",
+			"limits": "cpp",
+			"semaphore": "cpp",
+			"valarray": "cpp",
+			"vector": "cpp"
+		}
+	}
+}

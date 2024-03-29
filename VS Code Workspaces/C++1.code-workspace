@@ -13,7 +13,9 @@
 			"limits": "cpp",
 			"semaphore": "cpp",
 			"valarray": "cpp",
-			"vector": "cpp"
+			"vector": "cpp",
+			"compare": "cpp",
+			"iostream": "cpp"
 		}
 	}
 }

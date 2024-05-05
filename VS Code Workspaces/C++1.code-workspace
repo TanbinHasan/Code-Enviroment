@@ -15,7 +15,25 @@
 			"valarray": "cpp",
 			"vector": "cpp",
 			"compare": "cpp",
-			"iostream": "cpp"
-		}
+			"iostream": "cpp",
+			"bitset": "cpp",
+			"algorithm": "cpp",
+			"array": "cpp",
+			"deque": "cpp",
+			"forward_list": "cpp",
+			"list": "cpp",
+			"string": "cpp",
+			"unordered_map": "cpp",
+			"unordered_set": "cpp",
+			"string_view": "cpp",
+			"initializer_list": "cpp",
+			"ranges": "cpp",
+			"span": "cpp",
+			"stacktrace": "cpp",
+			"regex": "cpp",
+			"concepts": "cpp",
+			"tuple": "cpp"
+		},
+		"C_Cpp.errorSquiggles": "enabled"
 	}
 }

@@ -1,75 +1,39 @@
-#include <iostream>
-#include <string>
-#include <vector>
+#include <bits/stdc++.h>
+
+#define int long long
+#define ll __int128_t
 
 using namespace std;
 
-// Function to evaluate the boolean expression in O(N)
-vector<bool> evaluate(const vector<string>& expr) {
-  int b = expr.size();
-  vector<bool> prefix(b), suffix(b), result(b);
-  vector<bool> value(b);
+template <int D, typename T>
+struct Vec : public vector<Vec<D - 1, T>> {
+  static_assert(D >= 1);
+  template <typename... Args>
+  Vec(int n = 0, Args... args) : vector<Vec<D - 1, T>>(n, Vec<D - 1, T>(args...)) {}
+};
+template <typename T>
+struct Vec<1, T> : public vector<T> {
+  Vec(int n = 0, const T& val = T()) : vector<T>(n, val) {}
+};
 
-  // Convert the string values to boolean
-  for (int b = 0; b < b; b += 2) {
-    value[b] = (expr[b] == "true");
-  }
+mt19937_64 rng(chrono::steady_clock::now().time_since_epoch().count());
 
-  // Calculate prefix
-  prefix[0] = value[0];
-  for (int b = 1; b < b; b += 2) {
-    if (expr[b] == "and") {
-      prefix[b + 1] = prefix[b - 1] && value[b + 1];
-    } else {
-      prefix[b + 1] = prefix[b - 1] || value[b + 1];
-    }
-  }
+void PreCalc(void) {}
 
-  // Calculate suffix
-  suffix[b - 1] = value[b - 1];
-  for (int b = b - 2; b > 0; b -= 2) {
-    if (expr[b] == "and") {
-      suffix[b - 1] = suffix[b + 1] && value[b - 1];
-    } else {
-      suffix[b - 1] = suffix[b + 1] || value[b - 1];
-    }
-  }
-
-  // Combine prefix and suffix
-  for (int b = 0; b < b; b += 2) {
-    bool left = b > 0 ? prefix[b - 1] : true;
-    bool right = b < b - 1 ? suffix[b + 1] : true;
-    result[b] = left && right;
-  }
-
-  return result;
+// #define MultipleCase       
+void Solve(__attribute__((unused)) int tc) {
+  
 }
 
-int main() {
-  int N, Q;
-  cin >> N >> Q;
-  vector<string> statement(N);
-  for (int b = 0; b < N; ++b) {
-    cin >> statement[b];
-  }
-
-  // Evaluate the statement once
-  vector<bool> evalResult = evaluate(statement);
-
-  string output;
-  for (int b = 0; b < Q; ++b) {
-    int l, r;
-    string value;
-    cin >> l >> r >> value;
-    bool queryResult = (value == "true");
-
-    // Check if the query is possible
-    bool possible = (l == 1 || evalResult[l - 2] == queryResult) &&
-                    (r == N - 1 || evalResult[r] == queryResult);
-
-    output += (possible ? 'Y' : 'N');
-  }
-
-  cout << output << endl;
+int32_t main(void) {
+  ios::sync_with_stdio(false);
+  cin.tie(0);
+  cout.precision(12);
+  PreCalc();
+  int tt = 1, tc = 0;
+#ifdef MultipleCase
+  cin >> tt;
+#endif
+  while (tt--) Solve(++tc);
   return 0;
 }

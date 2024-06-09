@@ -1,21 +1,25 @@
 #include <bits/stdc++.h>
-
-#define int long long
-
 using namespace std;
 
-// #define MultipleCase    
+typedef long long i64;
+
+void PreCalculation(void) {}
+
+// #define MultipleCase
 void Solve(int tc) {
   
 }
 
-signed main(void) {
+int main(void) {
   ios::sync_with_stdio(false);
   cin.tie(0);
-  int tt = 1, tc = 0;
-  #ifdef MultipleCase
-  cin >> tt;      
-  #endif
-  while (tt--) Solve(++tc);
+  PreCalculation();
+  int tt = 1;
+#ifdef MultipleCase
+  cin >> tt;
+#endif
+  for (int tc = 1; tc <= tt; ++tc) {
+    Solve(tc);
+  }
   return 0;
 }

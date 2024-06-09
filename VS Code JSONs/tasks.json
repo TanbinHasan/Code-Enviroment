@@ -5,8 +5,10 @@
       "label": "build and run",
       "type": "shell",
       "command": "g++.exe -std=c++2a \"${file}\" -o \"${fileBasenameNoExtension}.exe\" && \"./${fileBasenameNoExtension}.exe\" < inputf.txt > outputf.txt",
-      "group": "build",
-      "problemMatcher": "$gcc"
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
     }
   ]
 }

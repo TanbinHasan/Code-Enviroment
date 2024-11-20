@@ -7,7 +7,9 @@ void PreCalculation(void) {}
 
 // #define MultipleCase
 void Solve(int tc) {
-  
+  i64 n;
+  cin >> n;
+  cout << n * 4000LL << '\n';
 }
 
 int main(void) {

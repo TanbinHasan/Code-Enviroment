@@ -7,7 +7,7 @@ void PreCalculation(void) {}
 
 // #define MultipleCase
 void Solve(int tc) {
-  // do the task
+  
 }
 
 int main(void) {

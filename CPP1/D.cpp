@@ -3,23 +3,23 @@ using namespace std;
 
 typedef long long i64;
 
-void PreCalculation(void) {}
+void precalc(void) {}
 
-// #define MultipleCase
-void Solve(int tc) {
+// #define testcase
+void solve(int tc) {
   
 }
 
 int main(void) {
   ios::sync_with_stdio(false);
-  cin.tie(0);
-  PreCalculation();
+  cin.tie(nullptr);
+  precalc();
   int tt = 1;
-#ifdef MultipleCase
+#ifdef testcase
   cin >> tt;
 #endif
   for (int tc = 1; tc <= tt; ++tc) {
-    Solve(tc);
+    solve(tc);
   }
   return 0;
 }

@@ -7,7 +7,9 @@ void precalc(void) {}
 
 // #define testcase
 void solve(int tc) {
-  
+  int n;
+  cin >> n;
+  cout << n * n << '\n';
 }
 
 int main(void) {
